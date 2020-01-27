@@ -1,8 +1,8 @@
-
-
+version: 2
+ jobs:
    build:
      docker:
        - image: circleci/openjdk8
      steps:
-       - run: echo Build started on `date`
-      
+       - checkout
+       - run: echo "A first hello"
