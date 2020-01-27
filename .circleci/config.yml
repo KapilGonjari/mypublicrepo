@@ -6,7 +6,6 @@
      steps:
        - checkout
        - run: echo "A first hello"
-       - run: echo Just listing basic information about the environment
       - run: which mvn
       -run: mvn -version
       - run: pwd
