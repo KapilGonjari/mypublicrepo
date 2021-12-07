@@ -34,8 +34,8 @@ jobs:
            cd ..
        
       - store_artifacts:
-         path: /appfiles
-         destination: HelloWorld.tar.gz
+         path: /target
+         destination: HelloWorld-1.war
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
