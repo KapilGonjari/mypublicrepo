@@ -20,6 +20,22 @@ jobs:
       - run:
           name: "Building"
           command: "mvn package"
+          
+      - run:
+        name: Creating Dummy Artifacts
+        command: |
+          echo "my artifact file" > /tmp/appfiles;
+          mkdir /tmp/appfiles;
+          cp ../target/HelloWorld-1.war .
+          cp ../appspec.yml .
+          ls -al
+          tar -zcvf ../target/HelloWorld.tar.gz *.*
+          echo "my artifact files in a dir" > /target/HelloWorld-1.war;
+      - store_artifacts:
+        path: /tmp/appfiles
+        destination: HelloWorld-1.war
+      - store_artifacts:
+        path: /tmp/artifacts
       
 
 # Invoke jobs via workflows
