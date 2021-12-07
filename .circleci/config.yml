@@ -31,7 +31,8 @@ jobs:
            ls -lrth
            tar -zcvf ../target/HelloWorld.tar.gz *.*  
            ls -lrth
-           cd ..
+           cd ../
+           ls -lrth
        
       - store_artifacts:
          path: ../
