@@ -15,9 +15,6 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Starting Build"
-          command: "mvn package"
-      - run:
           name: "Date"
           command: "echo Build started on `date`"
       - run:
