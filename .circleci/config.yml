@@ -23,7 +23,7 @@ jobs:
       - run:
           name: Creating Dummy Artifacts
           command: |
-           echo "my artifact file" > /target/appfiles
+           cd target
            ls -lrth
            mkdir /target/appfiles
            cd appfiles
