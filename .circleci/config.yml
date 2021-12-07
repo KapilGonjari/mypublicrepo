@@ -25,6 +25,7 @@ jobs:
           command: |
            ls -lrth
            mkdir appfiles
+           cd appfiles
            cp ../target/HelloWorld-1.war .
            cp ../appspec.yml .
            ls -lrth
