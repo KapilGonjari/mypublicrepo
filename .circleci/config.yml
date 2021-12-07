@@ -23,18 +23,17 @@ jobs:
       - run:
           name: Creating Dummy Artifacts
           command: |
-           cd target
            ls -lrth
            mkdir appfiles
-           cp target/HelloWorld-1.war /appfiles
-           cp appspec.yml /appfiles
+           cp ../target/HelloWorld-1.war .
+           cp ../appspec.yml .
            ls -lrth
            cd ..
            tar -zcvf ../target/HelloWorld.tar.gz *.*          
        
       - store_artifacts:
          path: /appfiles
-         destination: HelloWorld-1.war
+         destination: HelloWorld.tar.gz
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
