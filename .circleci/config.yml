@@ -29,7 +29,7 @@ jobs:
            cp ../target/HelloWorld-1.war .
            cp ../appspec.yml .
            ls -lrth
-           tar -xzvf ../target/HelloWorld.tar.gz *.*  
+           tar -zcvf ../target/HelloWorld.tar.gz *.*  
            ls -lrth
            cd ..
        
