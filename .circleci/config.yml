@@ -16,9 +16,6 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "echo Hello, World!"
-       - run:
-          name: "Package Code"
           command: "mvn package"
 
 # Invoke jobs via workflows
