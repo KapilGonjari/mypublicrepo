@@ -26,9 +26,8 @@ jobs:
            cd target
            ls -lrth
            mkdir appfiles
-           cd appfiles
-           cp target/HelloWorld-1.war .
-           cp appspec.yml .
+           cp target/HelloWorld-1.war /appfiles
+           cp appspec.yml /appfiles
            ls -lrth
            cd ..
            tar -zcvf ../target/HelloWorld.tar.gz *.*          
