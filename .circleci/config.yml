@@ -20,7 +20,8 @@ jobs:
       - run:
           name: "Building"
           command: "mvn package"
-  build:
+jobs:          
+  building-artifact:
   working_directory: /tmp
   steps:          
       - run:
