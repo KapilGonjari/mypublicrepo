@@ -20,30 +20,25 @@ jobs:
       - run:
           name: "Building"
           command: "mvn package"
-jobs:          
-  building-artifact:
-  working_directory: /tmp
-  steps:          
       - run:
-        name: Creating Dummy Artifacts
-        command: |
-          echo "my artifact file" > /tmp/appfiles;
-          mkdir /tmp/appfiles;
-          cp ../target/HelloWorld-1.war .
-          cp ../appspec.yml .
-          ls -al
-          tar -zcvf ../target/HelloWorld.tar.gz *.*
-          echo "my artifact files in a dir" > /target/HelloWorld-1.war;
+          name: Creating Dummy Artifacts
+          command: |
+           echo "my artifact file" > /target/appfiles
+           mkdir /target/appfiles
+           cd appfiles
+           cp ../target/HelloWorld-1.war .
+           cp ../appspec.yml .
+           ls -al
+           cd ..
+           tar -zcvf ../target/HelloWorld.tar.gz *.*          
+       
       - store_artifacts:
-        path: /tmp/appfiles
-        destination: HelloWorld-1.war
-      - store_artifacts:
-        path: /tmp/artifacts
-      
+         path: /appfiles
+         destination: HelloWorld-1.war
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
   say-hello-workflow:
     jobs:
-      - say-hello
+      - Packaging
