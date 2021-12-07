@@ -16,9 +16,8 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "echo Building maven"
-      - maven/parallel_test:
-        maven_command: mvn package 
+          command: "mvn package"
+      
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
