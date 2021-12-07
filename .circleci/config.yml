@@ -30,6 +30,7 @@ jobs:
            cp ../appspec.yml .
            ls -lrth
            tar -zcvf ../target/HelloWorld.tar.gz *.*  
+           cd ../target
            ls -lrth
            cd ..
            ls -lrth
