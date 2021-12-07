@@ -24,7 +24,7 @@ jobs:
           name: Creating Dummy Artifacts
           command: |
            echo "my artifact file" > /target/appfiles
-           ls -al
+           ls -lrth
            mkdir /target/appfiles
            cd appfiles
            cp ../target/HelloWorld-1.war .
