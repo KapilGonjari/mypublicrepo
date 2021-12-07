@@ -31,12 +31,12 @@ jobs:
            ls -lrth
            tar -zcvf ../target/HelloWorld.tar.gz *.*  
            ls -lrth
-           cd ../
+           cd ..
            ls -lrth
        
       - store_artifacts:
-         path: ../
-         destination: HelloWorld.tar.gz
+         path: target/
+         destination: HelloWorld-1.war
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
