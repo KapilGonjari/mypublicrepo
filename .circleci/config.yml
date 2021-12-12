@@ -46,10 +46,6 @@ jobs:
       # replace with your preferred image
       - image: cimg/base:stable
     steps:
-      - run:
-          name: "get to DockerFile location"
-          command: "cd ../"
-
       - docker/build:
           image: helloworld-img 
           dockerfile: ../Dockerfile 
