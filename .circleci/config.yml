@@ -48,7 +48,7 @@ jobs:
     steps:
       - docker/build:
           image: helloworld-img 
-          dockerfile: Dockerfile 
+          dockerfile: ../Dockerfile 
  
 
 # Invoke jobs via workflows
